@@ -1,5 +1,5 @@
 #QUE - Write a function for basic math operations like add multiply substract divide and use this in your program, take 2 number input from user.
-'''
+
 def addition(a,b):
     print(f"Addition {a}+{b} is : {a+b}")
 def subtraction(a,b):
@@ -38,7 +38,7 @@ while True:
         break
     else:
         print("invalid choice\nplease enter correct choice")
-'''
+
 #QUE - Write a program to check Palindrome Number
 #          1. The Number  which is equal to reverse number know as Palindrome Number.
 #          For example Number 12321 is a Palindrome Number, because 12321 is equal to its reverse Number 12321.
@@ -58,5 +58,5 @@ def is_palindrome(n):
     else :
         print(f"number {x} is not a palindrome number.")
 
-n = int(input("enter a number : "))
-is_palindrome(n)
+num = int(input("enter a number : "))
+is_palindrome(num)
