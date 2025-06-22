@@ -21,20 +21,21 @@ while True:
     2. subtraction
     3. multiplication
     4. division
-    5. exit
     """)
 
     n = int(input("Enter your choice : "))
 
     if n == 1:
         addition(a,b)
+        break
     elif n == 2:
         subtraction(a,b)
+        break
     elif n == 3:
         multiply(a,b)
+        break
     elif n == 4:
         divide(a,b)
-    elif n ==5:
         break
     else:
         print("invalid choice\nplease enter correct choice")
@@ -60,3 +61,4 @@ def is_palindrome(n):
 
 num = int(input("enter a number : "))
 is_palindrome(num)
+
