@@ -112,6 +112,11 @@ print("\nCOURSES TABLE : ")
 for i in data_courses:
     print(i)
 
+print("showing data of faculties whose salary is more than 82000 : ")
+data_faculty = con.execute("SELECT * FROM faculty WHERE F_SALARY > 82000")
+for i in data_faculty:
+    print(i)
+
 #DATA DELETION
 id_del_stu = input("\nEnter id to be deleted from student table : ")
 con.execute(f"DELETE FROM students WHERE S_ID={id_del_stu}")
