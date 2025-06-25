@@ -103,10 +103,3 @@ print(df5)
 result = df5[df5['marks'] != 30]
 print("\ndataframe after dropping rows where marks=30:")
 print(result)
-
-# Using df1 as example
-print("\nOriginal df1:")
-print(df1)
-
-new_row = {'roll no': 4, 'name': 'new_student', 'marks': 40}
-position = 1
