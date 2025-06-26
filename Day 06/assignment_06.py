@@ -12,7 +12,7 @@ print(time_series, "\n")
 
 df1 = pd.DataFrame({
     'ID': [1, 2, 3, 4, 5, 7],
-    'Name': ['Jatin', 'Kannu', 'Aayu', 'Deepak', 'Jhanvi', 'Harshit']
+    'Name': ['Jatin', 'Kannu', 'Aayu', 'Deepak', 'krishna', 'Harshit']
 })
 
 df2 = pd.DataFrame({
@@ -41,7 +41,7 @@ print("\nIndex-Based Join:\n", index_join)
 df1_multi = pd.DataFrame({
     'ID': [1, 2, 3, 4, 5, 7],
     'Section': ['A', 'A', 'B', 'B', 'C', 'D'],
-    'Name': ['Jatin', 'Kannu', 'Aayu', 'Deepak', 'Jhanvi', 'Harshit']
+    'Name': ['Jatin', 'Kannu', 'Aayu', 'Deepak', 'krishna', 'Harshit']
 })
 
 df2_multi = pd.DataFrame({
@@ -58,7 +58,7 @@ print("\nMerge on Multiple Keys:\n", multi_merge)
 
 df1 = pd.DataFrame({
     'ID': [1, 2, 5, 6],
-    'Name': ['Jatin', 'Viren', 'Kannu', 'Jhanvi']
+    'Name': ['Jatin', 'Viren', 'Kannu', 'krishna']
 })
 
 df2 = pd.DataFrame({
