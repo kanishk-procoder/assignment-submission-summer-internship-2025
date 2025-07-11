@@ -1,0 +1,29 @@
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DateType
+from collections import defaultdict
+
+df = spark.table("workspace.my_database.matadata_final")
+
+table_columns = defaultdict(list)
+
+for x in df.collect():
+    table_name = x['tableName']
+    table_col = x['columnName']
+    col_type = x['datatype'].lower()
+    
+    if col_type == 'string':
+        dtype = 'string'
+    elif col_type == 'integer':
+        dtype = 'int'
+    elif col_type == 'date':
+        dtype = 'date'
+    else:
+        dtype = 'string'  
+
+    table_columns[table_name].append(f"{table_col} {dtype}")
+
+for table_name, columns in table_columns.items():
+    col_def = ", ".join(columns)
+    create_s = f"CREATE OR REPLACE TABLE {table_name} ({col_def})"
+    print(f"running {create_s}")
+    spark.sql(create_s)
+    
